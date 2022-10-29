@@ -4,6 +4,10 @@
   box-sizing: border-box;
 }
 
+main {
+  position: relative;
+}
+
 header {
   min-height: 10vh;
   display: flex;
@@ -56,4 +60,10 @@ li {
   flex-direction: column;
   align-items: center;
   justify-content: center;
+}
+
+.time {
+  position: absolute;
+  top: -20%;
+  right: 5%;
 }
