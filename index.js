@@ -1,11 +1,10 @@
 import { Book, Switch, Store, UI } from './modules/index.js';
+
 import { DateTime } from './node_modules/luxon/src/luxon.js';
 
 const time = document.querySelector('.time');
 
-const updateTime = () => {
-  return DateTime.now().toLocaleString(DateTime.DATETIME_MED);
-};
+const updateTime = () => DateTime.now().toLocaleString(DateTime.DATETIME_MED);
 
 time.textContent = updateTime();
 setTimeout(updateTime, 60000);
