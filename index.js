@@ -1,4 +1,6 @@
-import { Book, Switch, Store, UI } from './modules/index.js';
+import {
+  Book, Switch, Store, UI,
+} from './modules/index.js';
 
 import { DateTime } from './node_modules/luxon/src/luxon.js';
 

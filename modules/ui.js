@@ -14,10 +14,9 @@ class UI {
     content = '';
   };
 
-  static generateId = () =>
-    Math.floor((1 + Math.random()) * 0x10000)
-      .toString(16)
-      .substring(1);
+  static generateId = () => Math.floor((1 + Math.random()) * 0x10000)
+    .toString(16)
+    .substring(1);
 
   static cleanInputs = () => {
     document.querySelector('#title').value = '';
