@@ -1,11 +1,16 @@
 import { Book, Switch, Store, UI } from './modules/index.js';
 import { DateTime } from './node_modules/luxon/src/luxon.js';
 
-// events
+const time = document.querySelector('.time');
+
+const updateTime = () => {
+  return DateTime.now().toLocaleString(DateTime.DATETIME_MED);
+};
+
+time.textContent = updateTime();
+setTimeout(updateTime, 60000);
+
 document.addEventListener('DOMContentLoaded', () => {
-  const time = document.querySelector('.time');
-  const dt = DateTime.now();
-  time.textContent = dt.toLocaleString(DateTime.DATETIME_MED);
   const books = Store.getBooks();
   UI.displayBooks(books);
 });
